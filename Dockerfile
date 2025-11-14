@@ -1,4 +1,4 @@
-# Stage 1: Buld the Next.js app
+# Stage 1: Build the Next.js app
 FROM node:25-alpine AS builder
 
 # Set the working directory
@@ -7,8 +7,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json files to the working directory
 COPY package*.json ./
 # Install dependencies
-# RUN npm ci
-RUN npm install
+RUN npm ci
 
 # Copy the rest of the application code to the working directory
 COPY . .
@@ -28,13 +27,13 @@ COPY --from=builder /app/public ./public
 
 # Install only production dependencies
 # RUN npm ci --only=production
-RUN npm install --production
+RUN npm ci --omit=dev
 
 # Expose the port the app runs on
 EXPOSE 3000
 
 # Start the Next.js app
-CMD ["npm", "next", "start"]
+CMD ["npm", "start"]
 
 
 
