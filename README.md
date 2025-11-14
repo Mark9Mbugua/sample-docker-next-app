@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Next.js on Netlify Platform Starter
 
 [Live Demo](https://nextjs-platform-starter.netlify.app/)
@@ -39,3 +40,6 @@ netlify dev
 ```
 
 If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
+=======
+# sample-docker-next-app
+>>>>>>> 9e6a9cbd118712ebf357c42f70372d44da1ab9cf
